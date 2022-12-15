@@ -299,7 +299,11 @@ _All these can be extended if your usage calls for more resources._
 - title: Hyper-V
   content: |
     <div class='note warning'>
-        Hyper-V does not have USB support
+        Hyper-V does not have USB support.
+        
+        Hyper-V in Windows on ARM is supported from Home Assistant OS 10.0 generic aarch64. Before you create a virtual machine, an image conversion should be done.
+       
+        An alternative conversion command: `qemu-img.exe convert haos_generic-aarch64.img -O vhdx -o subformat=dynamic haos_generic-aarch64.vhdx`
     </div>
 
     1. Create a new virtual machine
